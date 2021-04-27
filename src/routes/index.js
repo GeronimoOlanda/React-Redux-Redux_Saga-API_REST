@@ -1,6 +1,6 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-
+import { Switch } from 'react-router-dom';
+import MyRoute from './myRoute';
 import Login from '../pages/Login';
 import Page404 from '../pages/Page404';
 export default function Routes() {
@@ -9,8 +9,8 @@ export default function Routes() {
       {/* component,  Irá rendezirar o componente de Login, que esta em pages
        * Path, fará chegar se existe  a rota na qual o usuario esta buscando
        */}
-      <Route exact path="/" component={Login} />
-      <Route path="*" component={Page404} />
+      <MyRoute exact path="/" component={Login} />
+      <MyRoute path="*" component={Page404} />
     </Switch>
   );
 }
